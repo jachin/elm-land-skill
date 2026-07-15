@@ -1,6 +1,6 @@
 # Elm Land Skill
 
-This repository is a portable [Agent Skill](https://junie.jetbrains.com/docs/agent-skills.html) for the [Elm Land](https://elm.land) framework. It is designed to work with **Junie**, **OpenAI Codex**, **Claude Code**, **Amp**, and other AI coding assistants that support the `SKILL.md` or `AGENTS.md` formats.
+This repository is a portable [Agent Skill](https://junie.jetbrains.com/docs/agent-skills.html) for the [Elm Land](https://elm.land) framework. It provides AI coding assistants with the knowledge and tools needed to build production-ready Elm applications. It is compatible with **Junie**, **OpenAI Codex**, **Claude Code**, **Amp**, and other agents that support the `SKILL.md` or `AGENTS.md` standards.
 
 ## Installation
 
@@ -70,4 +70,4 @@ Example prompts:
 
 ## License
 
-This skill is distributed under the MIT License. The included `elm-land` source code and documentation are subject to their own respective licenses.
+This skill is distributed under the MIT License.

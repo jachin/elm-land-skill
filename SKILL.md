@@ -106,6 +106,7 @@ Use the CLI to generate boilerplate and maintain consistency:
 ## Reference Materials
 
 Detailed guides and API references are available in the `references/` directory:
+- [Conventions](references/conventions.md)
 - [Checklists](references/checklists.md)
 - [JS Interoperability](references/interop.md)
 - [User Authentication](references/auth.md)

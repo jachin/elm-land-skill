@@ -33,4 +33,4 @@ You are an expert in the Elm Land framework. Use these rules to guide your devel
 - Ensure all custom types used in `Shared.Model` are accessible to pages if needed.
 
 ## Reference
-Refer to the `references/` directory in this skill for deep dives into Auth, JS Interop, and Layouts.
+Refer to the `references/` directory in this skill for deep dives into Conventions, Auth, JS Interop, and Layouts.

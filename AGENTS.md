@@ -1,44 +1,28 @@
-# AGENTS.md
+# Elm Land Agent Skill
 
-Elm Land instructions for AI coding agents.
+This repository contains a portable skill for AI coding agents (like Junie, Claude, and Codex) to build and maintain **Elm Land** applications.
 
-## Core Principles
-- **Reliability first**: Elm Land is designed for production-ready, reliable Elm apps.
-- **Convention over configuration**: Follow the framework's file-based routing and structure.
-- **CLI-driven**: Always prefer using the `elm-land` CLI for generating code.
+## Role of the Agent
+When this skill is active, you are an expert in the **Elm Land** framework. Your primary goal is to help the user build reliable, convention-driven Elm applications using the official tools and best practices.
 
-## Setup & CLI Usage
-- **Install CLI**: `npm install -g elm-land@latest`
-- **Init Project**: `elm-land init <name>`
-- **Dev Server**: `elm-land server` (default port 1234)
-- **Add Page**: `elm-land add page:<type> <url>`
-  - Types: `view` (static), `sandbox` (stateful), `element` (side-effects).
-- **Add Layout**: `elm-land add layout <name>`
-- **Build**: `elm-land build`
+## How to use this Skill
+- **CLI First**: Always prefer the `elm-land` CLI for generating code.
+- **Consult References**: Use the `@references/` directory for deep-dives into specific topics.
+- **Verify Environment**: Use `@scripts/verify.sh` to ensure the project is ready.
 
-## Routing & Files
-- Routes are defined by files in `src/Pages/`.
-- Dynamic parameters MUST end with an underscore (e.g., `User_.elm` for `/:user`).
-- Nested routes use directories (e.g., `src/Pages/Settings/Account.elm` for `/settings/account`).
-- Catch-all route: `src/Pages/ALL_.elm`.
+## Finding Information
+For the most up-to-date information on Elm Land, refer to these sources:
 
-## Implementation Details
-- **Shared State**: Use `src/Shared.elm` for data needed by all pages (e.g., Auth).
-- **Layouts**: Wrap pages in layouts using `Page.withLayout` in the page module.
-- **Interoperability**: Check `src/InteropDefinitions.elm` for JS flags and ports.
-- **Configuration**: Use `elm-land.json` for framework settings and `elm.json` for dependencies.
-
-## Coding Style
-- Follow standard Elm formatting (use `elm-format`).
-- Keep page modules focused on their specific logic; move shared logic to `Shared.elm` or helper modules.
-- Ensure all custom types used in `Shared.Model` are accessible to pages if needed.
-
-## Reference Materials
-The skill contains detailed documentation in the `references/` directory.
+### Internal Documentation (included in this Skill)
+- @references/conventions.md: Core framework conventions and coding style.
 - @references/checklists.md: Step-by-step guides for common tasks.
-- @references/interop.md: JS interop (Flags, Ports, Env vars).
 - @references/auth.md: User authentication and protected routes.
-- @references/layouts.md: Reusable stateful UI.
-- @references/effects.md: Handling side-effects and custom effects.
-- @references/examples.md: Descriptions and links to official examples.
-- @references/deployment.md: Building and hosting for production.
+- @references/interop.md: JavaScript interoperability (Flags, Ports).
+- @references/layouts.md: Reusable stateful UI patterns.
+- @references/effects.md: Side-effect management.
+- @references/examples.md: Descriptions of official example patterns.
+
+### External Resources
+- **Official Site**: [https://elm.land](https://elm.land) - The definitive guide and documentation.
+- **GitHub Repository**: [https://github.com/elm-land/elm-land](https://github.com/elm-land/elm-land) - Source code and community examples.
+- **Elm Slack**: Join the `#elm-land` channel for community support.
