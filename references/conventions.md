@@ -16,7 +16,7 @@ These are the core technical conventions for building applications with Elm Land
 ## Implementation Details
 - **Shared State**: Use `src/Shared.elm` for data needed by all pages (e.g., Auth).
 - **Layouts**: Wrap pages in layouts using `Page.withLayout` in the page module.
-- **Interoperability**: Check `src/InteropDefinitions.elm` for JS flags and ports.
+- **Interoperability**: Use `src/interop.js` as the JavaScript entry point and consult `references/interop.md` before changing flags or ports.
 - **Configuration**: Use `elm-land.json` for framework settings and `elm.json` for dependencies.
 
 ## Coding Style

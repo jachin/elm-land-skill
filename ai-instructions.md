@@ -5,7 +5,9 @@ You are an expert in the Elm Land framework. Use these rules to guide your devel
 ## Core Principles
 - **Reliability first**: Elm Land is designed for production-ready, reliable Elm apps.
 - **Convention over configuration**: Follow the framework's file-based routing and structure.
-- **CLI-driven**: Always prefer using the `elm-land` CLI for generating code.
+- **Inspect before editing**: Read `elm-land.json`, `elm.json`, and affected generated or customized modules before modifying an existing app. Preserve user customizations.
+- **CLI-driven**: Prefer the `elm-land` CLI for supported generators and customizations; edit manually only when the CLI cannot express the requested change.
+- **Project-local first**: Use `npx elm-land ...` when the project has a local CLI, and do not install tools globally without approval.
 
 ## CLI Usage
 - **Init**: `elm-land init <name>`
@@ -14,6 +16,8 @@ You are an expert in the Elm Land framework. Use these rules to guide your devel
   - Types: `view` (static), `sandbox` (stateful), `element` (side-effects).
 - **Add Layout**: `elm-land add layout <name>`
 - **Build**: `elm-land build`
+
+After meaningful changes, run `elm-land build`. Run `elm-format --validate` for changed Elm files when available, and only start `elm-land server` when requested or needed for browser verification.
 
 ## Routing & Files
 - Routes are defined by files in `src/Pages/`.
@@ -24,7 +28,7 @@ You are an expert in the Elm Land framework. Use these rules to guide your devel
 ## Implementation Details
 - **Shared State**: Use `src/Shared.elm` for data needed by all pages (e.g., Auth).
 - **Layouts**: Wrap pages in layouts using `Page.withLayout` in the page module.
-- **Interoperability**: Check `src/InteropDefinitions.elm` for JS flags and ports.
+- **Interoperability**: Use `src/interop.js` as the JavaScript entry point; consult `references/interop.md` before changing flags or ports.
 - **Configuration**: Use `elm-land.json` for framework settings and `elm.json` for dependencies.
 
 ## Coding Style
@@ -33,4 +37,4 @@ You are an expert in the Elm Land framework. Use these rules to guide your devel
 - Ensure all custom types used in `Shared.Model` are accessible to pages if needed.
 
 ## Reference
-Refer to the `references/` directory in this skill for deep dives into Conventions, Auth, JS Interop, and Layouts.
+Consult the matching guide in `references/` before changing authentication, effects, interop, layouts, or deployment.

@@ -6,9 +6,11 @@ This repository contains a portable skill for AI coding agents (like Junie, Clau
 When this skill is active, you are an expert in the **Elm Land** framework. Your primary goal is to help the user build reliable, convention-driven Elm applications using the official tools and best practices.
 
 ## How to use this Skill
-- **CLI First**: Always prefer the `elm-land` CLI for generating code.
-- **Consult References**: Use the `@references/` directory for deep-dives into specific topics.
-- **Verify Environment**: Use `@scripts/verify.sh` to ensure the project is ready.
+- **Inspect first**: Before changing an existing app, read `elm-land.json`, `elm.json`, and the relevant generated or customized modules. Do not overwrite user customizations.
+- **CLI first**: Prefer the `elm-land` CLI to generate supported pages, layouts, and customizations. If the CLI cannot express the change, edit the generated file while preserving its established API and style.
+- **Use project-local commands**: Prefer `npx elm-land ...` when the project provides a local CLI; otherwise use the installed `elm-land` command. Do not install packages globally without the user's approval.
+- **Verify proportionally**: Run `scripts/verify.sh` when checking prerequisites, `elm-land build` after meaningful changes, and `elm-format --validate` for changed Elm files when available. Do not start a long-running server unless requested.
+- **Consult references as needed**: Read the relevant document in `references/` before implementing authentication, interop, layouts, effects, or deployment changes.
 
 ## Finding Information
 For the most up-to-date information on Elm Land, refer to these sources:
@@ -21,6 +23,7 @@ For the most up-to-date information on Elm Land, refer to these sources:
 - @references/layouts.md: Reusable stateful UI patterns.
 - @references/effects.md: Side-effect management.
 - @references/examples.md: Descriptions of official example patterns.
+- @references/deployment.md: Production builds and SPA hosting configuration.
 
 ### External Resources
 - **Official Site**: [https://elm.land](https://elm.land) - The definitive guide and documentation.
