@@ -1,16 +1,35 @@
 ---
 name: elm-land
-description: A skill for building reliable web applications using the Elm Land framework.
+description: This skill provides instructions and tools for building, maintaining, and scaling Elm applications using the Elm Land framework. Use when the user asks to "init a project", "add a page", "add a layout", or "run the dev server" in an Elm Land context.
+interface:
+  display_name: "Elm Land"
+  short_description: "Build reliable web apps with Elm Land."
+  brand_color: "#60B5CC"
+when_to_use:
+  - User is working in an Elm Land project (contains elm-land.json)
+  - User asks to create a new Elm Land application
+  - User wants to add pages or layouts to an existing Elm Land app
+  - User needs help with Elm Land routing or project structure
+paths:
+  - elm-land.json
+  - elm.json
+  - "**/*.elm"
+allowed-tools:
+  - Bash
+  - Read
+  - Edit
+  - Write
+  - Grep
 license: MIT
 metadata:
   author: Elm Land Team
-  version: "1.0"
+  version: "1.4"
   compatibility: Requires Node.js (v18.16.0+), elm-land CLI
 ---
 
 # Elm Land Skill
 
-This skill provides Junie with the knowledge to build, maintain, and scale Elm applications using the [Elm Land](https://elm.land) framework.
+This skill provides the knowledge to build, maintain, and scale Elm applications using the [Elm Land](https://elm.land) framework.
 
 ## Core Concepts
 
@@ -81,13 +100,16 @@ Use the CLI to generate boilerplate and maintain consistency:
 - **Use the CLI**: Always use `elm-land add` commands to ensure files are placed correctly and required imports are added.
 - **Follow Routing Rules**: Ensure dynamic parameters end with an underscore (e.g., `User_.elm`) to match URL segments.
 - **Leverage Layouts**: Use `Page.withLayout` in your page modules to wrap them in consistent UI like navbars or sidebars.
-- **Use Checklists**: Refer to `checklists/development.md` for step-by-step guides on common tasks.
-- **Check Documentation**: For deep dives into specific topics (Auth, JS Interop, Deployment), refer to the files in the `elm-land/docs` directory within this skill.
+- **Check References**: Refer to the `references/` directory for step-by-step guides and deep dives into specific topics.
+- **Official Documentation**: Visit [elm.land](https://elm.land) for the full framework documentation.
 
 ## Reference Materials
 
-Detailed documentation and examples are available in the `elm-land` directory:
-- [Concepts](elm-land/docs/concepts)
-- [Guides](elm-land/docs/guide)
-- [API Reference](elm-land/docs/reference)
-- [Official Examples](elm-land/examples): 20 examples covering everything from Hello World to Auth and TailwindCSS.
+Detailed guides and API references are available in the `references/` directory:
+- [Checklists](references/checklists.md)
+- [JS Interoperability](references/interop.md)
+- [User Authentication](references/auth.md)
+- [Layouts](references/layouts.md)
+- [Effects](references/effects.md)
+- [Examples](references/examples.md)
+- [Deployment](references/deployment.md)
